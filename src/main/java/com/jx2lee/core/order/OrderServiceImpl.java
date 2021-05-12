@@ -12,6 +12,8 @@ public class OrderServiceImpl implements OrderService{
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
+    // 자동으로 의존 관계를 주입하는 Autowired
+    // 주입을 자동으로 주입하길 원하는 생성자에 해당 annotation 작성
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
