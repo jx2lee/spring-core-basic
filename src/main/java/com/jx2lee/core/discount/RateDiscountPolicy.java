@@ -2,9 +2,12 @@ package com.jx2lee.core.discount;
 
 import com.jx2lee.core.member.Grade;
 import com.jx2lee.core.member.Member;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
 
     private int discountPercent = 10;

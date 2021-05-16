@@ -3,11 +3,10 @@ package com.jx2lee.core.order;
 import com.jx2lee.core.discount.DiscountPolicy;
 import com.jx2lee.core.member.Member;
 import com.jx2lee.core.member.MemberRepository;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
@@ -15,11 +14,11 @@ public class OrderServiceImpl implements OrderService{
 
     // 자동으로 의존 관계를 주입하는 Autowired
     // 주입을 자동으로 주입하길 원하는 생성자에 해당 annotation 작성
-    //    @Autowired
-    //    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-    //        this.memberRepository = memberRepository;
-    //        this.discountPolicy = discountPolicy;
-    //    }
+    @Autowired
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
     // RequiredArgsConstructor annotion 사용 시 아래 생성자를 자동으로 만들어준다.
     // 대..박
 
