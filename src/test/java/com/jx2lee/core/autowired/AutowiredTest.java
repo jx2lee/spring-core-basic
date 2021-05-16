@@ -1,11 +1,11 @@
 package com.jx2lee.core.autowired;
 
 import com.jx2lee.core.member.Member;
-import com.sun.istack.internal.Nullable;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.lang.Nullable;
 
 import java.util.Optional;
 
@@ -14,7 +14,6 @@ public class AutowiredTest {
     @Test
     void AutowiredOption() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(TestBean.class);
-
     }
 
     static class TestBean {
