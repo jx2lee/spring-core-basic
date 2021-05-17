@@ -1,5 +1,8 @@
 package lifecycle;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 public class NetWorkClient {
 
     private String url;
@@ -26,13 +29,15 @@ public class NetWorkClient {
         System.out.println("close: " + url);
     }
 
-    public void init() throws Exception {
+    @PostConstruct
+    public void init() {
         System.out.println("NetWorkClient.init");
         connect();
         call("초기화 연결 메세지");
     }
 
-    public void close() throws Exception {
+    @PreDestroy
+    public void close() {
         System.out.println("NetWorkClient.close");
         disconnect();
     }
