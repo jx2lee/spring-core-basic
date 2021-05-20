@@ -1,4 +1,4 @@
-package lifecycle;
+package com.jx2lee.core.lifecycle;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;

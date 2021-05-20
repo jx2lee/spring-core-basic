@@ -1,4 +1,4 @@
-package lifecycle;
+package com.jx2lee.core.lifecycle;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ConfigurableApplicationContext;
